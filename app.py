@@ -4,8 +4,8 @@ from flask_socketio import SocketIO, join_room, leave_room, emit
 import os
 
 app = Flask(__name__)
-CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
+CORS(app, origins=["https://chat-app-five-teal-47.vercel.app"])
+socketio = SocketIO(app, cors_allowed_origins=["https://chat-app-five-teal-47.vercel.app"])
 
 # Track users' socket IDs
 connected_users = {}
